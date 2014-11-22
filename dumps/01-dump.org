@@ -46,10 +46,11 @@ There are a bunch of content around the things that Rust are incorporating, like
 It is a language in development, and you can see some discussions like [[http://lucumr.pocoo.org/2014/11/6/error-handling-in-rust/][how to deal with errors]] and [[http://smallcultfollowing.com/babysteps/blog/2014/11/14/allocators-in-rust/][what allocator should be used]].
 
 The lifecycle of pointers itself generates several blog posts and looks like one of the most interesting features of the language.
-http://words.steveklabnik.com/pointers-in-rust-a-guide
-http://paulkoerbitz.de/posts/Understanding-Pointers-Ownership-and-Lifetimes-in-Rust.html
-http://blog.skylight.io/rust-means-never-having-to-close-a-socket/
-http://www.randomhacks.net/2014/09/19/rust-lifetimes-reckless-cxx/
+
+- http://words.steveklabnik.com/pointers-in-rust-a-guide
+- http://paulkoerbitz.de/posts/Understanding-Pointers-Ownership-and-Lifetimes-in-Rust.html
+- http://blog.skylight.io/rust-means-never-having-to-close-a-socket/
+- http://www.randomhacks.net/2014/09/19/rust-lifetimes-reckless-cxx/
 
 You can also see the macro system in action on [[https://danielkeep.github.io/quick-intro-to-macros.html][this blog post]].
 
@@ -65,4 +66,5 @@ I think there is already a handful of content, and I gotta save some for the nex
 Keep producing new content and send me links.
 
 Cheers,
+
 Bruno Tavares
