@@ -1,0 +1,68 @@
+#+Title: Link Dump #1 - The one with a bunch of links
+
+Hello there,
+
+This is the first collection of links I am creating and I hope you enjoy it.
+
+I would love to have this as a two way channel to share links.
+Feel free to hit me up over email with content.
+
+No more rambling, there we go.
+
+-----
+
+** Clojure/conj
+
+Clojure/conj just happened with amazing talks.
+The videos are being published really fast, almost after the talk ends.
+You can follow up on the [[https://www.youtube.com/playlist?list%3DPLZdCLR02grLoc322bYirANEso3mmzvCiI][ClojureTV Youtube Channel]]
+
+Before you go digging the content, you might want to check Eric Normand's pre-conj material.
+He collected more information around the talks, with interviews and links, so you can be part of the conversation that have been happening in-between the talks.
+One cool thing is that some talks are continuations of previous, and all of this conversation is being capture on the [[http://www.lispcast.com/pre-conj-2014][Pre-conj Prep 2014 archive]]
+
+** Dependent Types
+
+Are you ready to have your mind blow?
+I've been hearing [[https://twitter.com/ctfordLink:%20https://twitter.com/ctford][Chris Ford]] talk about [[http://www.idris-lang.org/][Idris]] for a while, and recently I came across Brian McKenna coding a [[https://www.youtube.com/watch?v%3DfVBck2Zngjo][type safe printf]] using dependent types.
+And it is amazing!
+
+Brian talked on StrangeLoop 2014 about Idris [[https://www.youtube.com/watch?v%3D4i7KrG1Afbk][with pratical examples]] and Chris Ford talked about the ideas [[http://vimeo.com/100976695][behind dependent types]].
+It is worth checking to get your mind expanded around the type system that is not so mainstream.
+
+** Unikernels
+Depoying applications are getting easier everyday. Since docker came into play, the deployment scenarios are changing a lot.
+Having a single unit do get your application running feels amazing, making sure the package is consisten across environments.
+
+Darren Rush comments that this could be the path to introduce [[https://medium.com/@darrenrush/after-docker-unikernels-and-immutable-infrastructure-93d5a91c849e][Unikernels]] on your immutable server deployment and list some of the projects that already tries to help you running your application on the metal with little overhead.
+
+** Xplain - Explaining X protocol on the browser
+Recently, Jasper St. Pierre added a new chapter on his [[https://magcius.github.io/xplain/article/index.html][interactive tutorial]] that explains how X works to display images on your computer.
+
+** Rust
+[[http://www.rust-lang.org/][Rust]] is a pretty interesting language that is being developed by Mozilla and brings some ideas to refresh the system programing space.
+There are a bunch of content around the things that Rust are incorporating, like algebric datatypes, macros and borrowing pointers.
+
+It is a language in development, and you can see some discussions like [[http://lucumr.pocoo.org/2014/11/6/error-handling-in-rust/][how to deal with errors]] and [[http://smallcultfollowing.com/babysteps/blog/2014/11/14/allocators-in-rust/][what allocator should be used]].
+
+The lifecycle of pointers itself generates several blog posts and looks like one of the most interesting features of the language.
+http://words.steveklabnik.com/pointers-in-rust-a-guide
+http://paulkoerbitz.de/posts/Understanding-Pointers-Ownership-and-Lifetimes-in-Rust.html
+http://blog.skylight.io/rust-means-never-having-to-close-a-socket/
+http://www.randomhacks.net/2014/09/19/rust-lifetimes-reckless-cxx/
+
+You can also see the macro system in action on [[https://danielkeep.github.io/quick-intro-to-macros.html][this blog post]].
+
+It is being used to write [[https://github.com/servo/servo][Servo]], a new browser engine. Using the borrowing pointer concept, they are being able to write [[https://blog.mozilla.org/research/2014/08/26/javascript-servos-only-garbage-collector/][better garbage collected]] code for the engine.
+Skylight is using Rust to write fast Ruby gems, instead of using C, and they [[http://blog.skylight.io/bending-the-curve-writing-safe-fast-native-gems-with-rust/?utm_source%3Drubyweekly&utm_medium%3Demail][wrote about the process]] as well.
+
+You might ask "What about go?", and Adam Jacob put up a nice [[https://medium.com/@adamhjk/rust-and-go-e18d511fbd95][write up]] around those two languages.
+There are also Armin Ronarcher's [[http://lucumr.pocoo.org/2014/10/1/a-fresh-look-at-rust/][write up]] on how he perceives Rust on the current ecosystem.
+
+-----
+
+I think there is already a handful of content, and I gotta save some for the next link dump.
+Keep producing new content and send me links.
+
+Cheers,
+Bruno Tavares
