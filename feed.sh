@@ -5,17 +5,18 @@ title="Link Dump"
 base_url="http://linkdump.bltavares.com/"
 
 entries() {
-    for file in archive/*.org; do
-        git_info="$(git log -n1 --format='%H|%an|%aI' -- "$file")"
+    for src in archive/*.org; do
+        file="${src%.org}.html"
+        git_info="$(git log -n1 --format='%H|%an|%aD' -- "$file")"
         IFS='|' read hash author date <<<"$git_info"
-        content="$(git show $hash:$file)"
-        title=$(grep "Title" <<<"$content" | cut -d: -f2)
+        content="$(git show $hash:$file | awk '/<body>/{ p=1; next } /<\/body>/{p=0} p')"
+        title=$(grep 'h1' <<<"$content" | grep 'title' | cut -d'>' -f2 | cut -d'<' -f1)
 
         cat <<EOF
 	<entry>
 		<title>${title}</title>
 		<link href="${base_url}${file}" />
-		<link rel="alternate" type="text/html" href="${base_url}${file%.org}.html"/>
+		<link rel="alternate" type="text/plain" href="${base_url}${src}"/>
 		<id>${base_url}${file}</id>
 		<updated>${date}</updated>
 		<author>
@@ -23,9 +24,7 @@ entries() {
 		</author>
 		<content xml:space="preserve" type="html">
         <![CDATA[
-            <pre>
-                ${content}
-            </pre>
+            ${content}
         ]]>
 		</content>
 	</entry>
@@ -34,7 +33,7 @@ EOF
 }
 
 last_update() {
-    git log -n1 --format='%aI' -- archive
+    git log -n1 --format='%aD' -- archive
 }
 
 cat > $file <<EOF
