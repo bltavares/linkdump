@@ -6,7 +6,8 @@ base_url="http://linkdump.bltavares.com/"
 
 entries() {
     for file in archive/*.org; do
-        IFS='|' read hash author date < <(git show --format='%H|%an|%aI' -s $file)
+        git_info="$(git log -n1 --format='%H|%an|%aI' -- "$file")"
+        IFS='|' read hash author date <<<"$git_info"
         content="$(git show $hash:$file)"
         title=$(grep "Title" <<<"$content" | cut -d: -f2)
 
@@ -31,7 +32,7 @@ EOF
 }
 
 last_update() {
-    git show --format='%aI' -s archive
+    git log -n1 --format='%aI' -- archive
 }
 
 cat > $file <<EOF
