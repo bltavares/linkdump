@@ -8,7 +8,7 @@ entries() {
     for file in archive/*.org; do
         git_info="$(git log -n1 --format='%H|%an|%aI' -- "$file")"
         IFS='|' read hash author date <<<"$git_info"
-        content="$(git show $hash:$file | awk 1 ORS='&#10;\n')"
+        content="$(git show $hash:$file)"
         title=$(grep "Title" <<<"$content" | cut -d: -f2)
 
         cat <<EOF
@@ -21,9 +21,11 @@ entries() {
 		<author>
 			<name>${author}</name>
 		</author>
-		<content xml:space="preserve" type="text">
+		<content xml:space="preserve" type="html">
         <![CDATA[
-            ${content}
+            <pre>
+                ${content}
+            </pre>
         ]]>
 		</content>
 	</entry>
