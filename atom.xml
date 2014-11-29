@@ -6,14 +6,14 @@
 	<link href="http://linkdump.bltavares.com/atom.xml" rel="self" />
 	<link href="http://linkdump.bltavares.com/" />
 	<id>http://linkdump.bltavares.com/</id>
-	<updated>Sat, 29 Nov 2014 21:19:36 -0200</updated>
+	<updated>2014-11-29T21:19:36-02:00</updated>
 
   	<entry>
 		<title>Link Dump #1 - The one with a bunch of links</title>
 		<link href="http://linkdump.bltavares.com/archive/01-dump.html" />
 		<link rel="alternate" type="text/plain" href="http://linkdump.bltavares.com/archive/01-dump.org"/>
 		<id>http://linkdump.bltavares.com/archive/01-dump.html</id>
-		<updated>Sun, 23 Nov 2014 00:32:24 -0200</updated>
+		<updated>2014-11-23T00:32:24-02:00</updated>
 		<author>
 			<name>Bruno Tavares</name>
 		</author>
