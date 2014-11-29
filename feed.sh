@@ -41,7 +41,7 @@ cat > $file <<EOF
 <feed xmlns="http://www.w3.org/2005/Atom">
  
 	<title>${title}</title>
-	<link href="${base_url}feed.atom" rel="self" />
+	<link href="${base_url}atom.xml" rel="self" />
 	<link href="${base_url}" />
 	<id>${base_url}</id>
 	<updated>$(last_update)</updated>
