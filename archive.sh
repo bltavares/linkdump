@@ -1,3 +1,19 @@
+#!/usr/bin/env bash
+
+file=${1:-archive/index.html}
+
+entries() {
+    for src in archive/*.org; do
+        file="${src%.org}.html"
+        title="$(grep 'Title' "$src" | cut -d: -f2)"
+
+        cat <<EOF
+<li><a href="$(basename "$file")">${title}</a></li>
+EOF
+    done
+}
+
+cat > $file <<EOF
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,7 +25,8 @@
     <h1>Link Dump - Archive</h1>
     <a href="../index.html">Up</a>
     <ol>
-    <li><a href="01-dump.html"> Link Dump #1 - The one with a bunch of links</a></li>
+    $(entries)
     </ol>
   </body>
 </html>
+EOF
