@@ -1,0 +1,134 @@
+#+Title: Link Dump #2 - Out of the OO box
+
+Hello you there,
+
+Welcome to another installment of the link dump.  The end of 2014 and
+the beginning of 2015 has been spawning a fantastic amount of links on
+my timeline.
+
+As I took a while to send out another link dump, I have plenty of
+links stored, so this one will be longer and still super interesting.
+
+One of the many topics around my saved content is FP, and I decided to
+make this a themed list.
+
+-----
+
+** Object Oriented Programming is an expensive disaster which must end
+   lawrence wrote a quite big article on why [[http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end][Object Oriented
+   Programming is an expensive disaster which must end]].
+   
+   The article might bring up some personal feelings with its tone, or
+   get you on defensive, but try reading it with an open mind,
+   criticizing Object Oriented as the silver bullet.
+   
+   It defiantly made me think more why do we choose OO for any
+   project, or what the languages that are OO bring up to the table
+   when you don't use features that people suggests to not use (like
+   mutability or inheritance).
+   
+   It was a good start to think about different styles of programming.
+   
+   Joe Armstrong have also written about the topic, on [[http://harmful.cat-v.org/software/OO_programming/why_oo_sucks][Why OO Sucks]],
+   which gives support on the idea of coding on a different style.
+   
+   Getting out of the OO mindset seems to be the goal of many people,
+   like Ju Gonçalves, that wrote why [[https://medium.com/@jugoncalves/functional-programming-should-be-your-1-priority-for-2015-47dd4641d6b9][Functional Programming should be
+   your 1st priority for 2015]].
+   
+** Haskell content for everybody
+   Haskell is a language that made me break out of the Object Oriented
+   mindset, but its strictness can be very daunting on the beginning.
+   I had to read, re-read, and give it a break sometimes to let the
+   thoughts to sink in, after revisiting
+   
+   Michael Robert Bernstein wrote a bit about his experience learning
+   this intriguing language, saying that [[http://michaelrbernste.in/2014/12/11/you-are-learning-haskell-right-now.html][You are learning Haskell
+   right now]]. It is good to see that acquiring the understand of some
+   higher abstractions might take its time.
+   
+   There is some good content on getting Haskell up and running on [[http://howistart.org/posts/haskell/1][How
+   I Start: Haskell]], so you can code a bit of pure FP.  Chris Allen
+   evaluated some of the learning resources for Haskell and wrote his
+   impressions around the [[http://bitemyapp.com/posts/2014-12-31-functional-education.html][functional education]], with a good suggestion
+   for people with different knowledge on programming.
+   
+   And if you find the errors hard to read, Don Stewart has a [[https://donsbot.wordpress.com/2007/11/14/no-more-exceptions-debugging-haskell-code-with-ghci/][really
+   nice tip to debug]] an interactive sessions and find out where the
+   nasty error is coming from.
+
+   Gabriel Gozalez has a [[http://www.haskellforall.com/][blog]] bringing some really good content on
+   Haskell and libraries; and Oliver Charles wrote [[https://ocharles.org.uk/blog/posts/2014-12-24-conclusion.html][24 blog posts]] on
+   extensions to use on GHC. It is an amazing content which showed me
+   how extensible this strict language can be.
+   
+   One great example of content that Gabriel Gonzalez have wrote is
+   [[http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html][how Haskell makes use of syntax sugars]] to provide a different
+   syntax other than the function calls with arguments. And if you
+   want more in-depth content, Heinrich Apfelmus explains how the [[https://hackhands.com/lazy-evaluation-works-haskell/][lazy
+   evaluation]] works even for computing lazy values.
+   
+   And there is no need to rush to learn the Monad abstraction. As
+   Chris writes [[http://two-wrongs.com/the-what-are-monads-fallacy][The what are monads fallacy]], getting the grasp of the
+   abstraction could be improved by understanding how each Monad is
+   used and implemented. In the end, monads are [[http://blog.plover.com/prog/burritos.html][burritos]], or better
+   put in [[http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html][pictures]].
+   
+   People ask about [[http://stackoverflow.com/questions/3077866/large-scale-design-in-haskell/3077912][how Haskell projects grow on enterprise project]],
+   [[http://stackoverflow.com/questions/27852709/enterprise-patterns-with-functional-programming][or FP in general]], and StackOverflow provide some insights on the
+   design of big architectures.
+   
+   I hope this is some good suggestions of content, and please,
+   contribute back to this list.  You can also ask questions on the
+   #haskell IRC channel, which have an [[https://gist.github.com/quchen/5280339][example]] of a bunch of nice
+   people sharing knowledge.
+   
+** Using a stronger type system on your applications
+   
+   Typesafety is a feature that you grow into liking.  Having the
+   compiler rejecting the program because you used the wrong function
+   on a data structure makes me feel happier than having that error
+   being catched after many rounds of tests, or in production.
+
+   Bartosz Milewski has a post on [[http://bartoszmilewski.com/2014/11/24/types-and-functions/][Types and Functions]] that could help
+   you to start liking some stronger type system.
+   
+   Modeling your domain on that kind of type system can bring many
+   benefits, from on encoding the rules and logic of your application
+   on a executable format, to having a more readable restrictions
+   represented on your data.  Scott Wlaschin have a talk demonstrating
+   what you can do with [[http://vimeo.com/97507575][F# to domain your model under its type system]],
+   and leverage the benefits of having those types in-place.
+
+** Transducers
+   Transducers are concepts that could be as complicated as Monads to
+   be explained.  The [[http://clojure.org/transducers][Clojure documentation]] has some technical
+   information on using and creating transducers.
+   
+   Rich Hickey gave an [[https://www.youtube.com/watch?v=6mTbuzafcII][introduction presentation]] at StrangeLoop, with
+   a follow-up talk explaining some of the [[https://www.youtube.com/watch?v=4KqUvG8HPYo][inside of the abstraction]]
+   on Clojure/conj.
+
+   Transducers work on top of functions, and return functions. You can
+   compose the resulting functions to create a processing pipeline,
+   but if will look a bit backwards if you are used to compose
+   functions.  Isac Cambron goes briefly [[http://isaaccambron.com/blog/2014/12/13/transducer-composition.html][explaining and demonstrating]]
+   why they compose backwardly.
+   
+   As I mentioned before, adding type annotation on a function could
+   help you understand what is allowed to get in, and what is the
+   output.  And annotating transducers sounds like a nice challenge.
+   Peter Fraenkel has a blog post with [[http://blog.podsnap.com/ducers2.html][annotated transducers on
+   Clojure. And Scala. And Haskell.]] An the followup posts on the
+   series are really good to read as well.
+   
+-----
+
+I hope you like the content of this link dump, with many functional links. 
+We now have the an [[http://linkdump.bltavares.com/atom.xml][Atom feed]] if you would rather that delivery method.
+
+Keep producing new content and send me links.
+
+Cheers,
+
+Bruno Tavares

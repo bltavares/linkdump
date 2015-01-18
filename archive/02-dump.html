@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Link Dump #2 - Out of the OO box</title>
+<!-- 2015-01-18 Sun 20:00 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Link Dump #2 - Out of the OO box</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Object Oriented Programming is an expensive disaster which must end</a></li>
+<li><a href="#sec-2">2. Haskell content for everybody</a></li>
+<li><a href="#sec-3">3. Using a stronger type system on your applications</a></li>
+<li><a href="#sec-4">4. Transducers</a></li>
+</ul>
+</div>
+</div>
+<p>
+Hello you there,
+</p>
+
+<p>
+Welcome to another installment of the link dump.  The end of 2014 and
+the beginning of 2015 has been spawning a fantastic amount of links on
+my timeline.
+</p>
+
+<p>
+As I took a while to send out another link dump, I have plenty of
+links stored, so this one will be longer and still super interesting.
+</p>
+
+<p>
+One of the many topics around my saved content is FP, and I decided to
+make this a themed list.
+</p>
+
+<hr  />
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Object Oriented Programming is an expensive disaster which must end</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+lawrence wrote a quite big article on why <a href="http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end">Object Oriented
+Programming is an expensive disaster which must end</a>.
+</p>
+
+<p>
+The article might bring up some personal feelings with its tone, or
+get you on defensive, but try reading it with an open mind,
+criticizing Object Oriented as the silver bullet.
+</p>
+
+<p>
+It defiantly made me think more why do we choose OO for any
+project, or what the languages that are OO bring up to the table
+when you don't use features that people suggests to not use (like
+mutability or inheritance).
+</p>
+
+<p>
+It was a good start to think about different styles of programming.
+</p>
+
+<p>
+Joe Armstrong have also written about the topic, on <a href="http://harmful.cat-v.org/software/OO_programming/why_oo_sucks">Why OO Sucks</a>,
+which gives support on the idea of coding on a different style.
+</p>
+
+<p>
+Getting out of the OO mindset seems to be the goal of many people,
+like Ju Gonçalves, that wrote why <a href="https://medium.com/@jugoncalves/functional-programming-should-be-your-1-priority-for-2015-47dd4641d6b9">Functional Programming should be
+your 1st priority for 2015</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Haskell content for everybody</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Haskell is a language that made me break out of the Object Oriented
+mindset, but its strictness can be very daunting on the beginning.
+I had to read, re-read, and give it a break sometimes to let the
+thoughts to sink in, after revisiting
+</p>
+
+<p>
+Michael Robert Bernstein wrote a bit about his experience learning
+this intriguing language, saying that <a href="http://michaelrbernste.in/2014/12/11/you-are-learning-haskell-right-now.html">You are learning Haskell
+right now</a>. It is good to see that acquiring the understand of some
+higher abstractions might take its time.
+</p>
+
+<p>
+There is some good content on getting Haskell up and running on <a href="http://howistart.org/posts/haskell/1">How
+I Start: Haskell</a>, so you can code a bit of pure FP.  Chris Allen
+evaluated some of the learning resources for Haskell and wrote his
+impressions around the <a href="http://bitemyapp.com/posts/2014-12-31-functional-education.html">functional education</a>, with a good suggestion
+for people with different knowledge on programming.
+</p>
+
+<p>
+And if you find the errors hard to read, Don Stewart has a <a href="https://donsbot.wordpress.com/2007/11/14/no-more-exceptions-debugging-haskell-code-with-ghci/">really
+nice tip to debug</a> an interactive sessions and find out where the
+nasty error is coming from.
+</p>
+
+<p>
+Gabriel Gozalez has a <a href="http://www.haskellforall.com/">blog</a> bringing some really good content on
+Haskell and libraries; and Oliver Charles wrote <a href="https://ocharles.org.uk/blog/posts/2014-12-24-conclusion.html">24 blog posts</a> on
+extensions to use on GHC. It is an amazing content which showed me
+how extensible this strict language can be.
+</p>
+
+<p>
+One great example of content that Gabriel Gonzalez have wrote is
+<a href="http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html">how Haskell makes use of syntax sugars</a> to provide a different
+syntax other than the function calls with arguments. And if you
+want more in-depth content, Heinrich Apfelmus explains how the <a href="https://hackhands.com/lazy-evaluation-works-haskell/">lazy
+evaluation</a> works even for computing lazy values.
+</p>
+
+<p>
+And there is no need to rush to learn the Monad abstraction. As
+Chris writes <a href="http://two-wrongs.com/the-what-are-monads-fallacy">The what are monads fallacy</a>, getting the grasp of the
+abstraction could be improved by understanding how each Monad is
+used and implemented. In the end, monads are <a href="http://blog.plover.com/prog/burritos.html">burritos</a>, or better
+put in <a href="http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html">pictures</a>.
+</p>
+
+<p>
+People ask about <a href="http://stackoverflow.com/questions/3077866/large-scale-design-in-haskell/3077912">how Haskell projects grow on enterprise project</a>,
+<a href="http://stackoverflow.com/questions/27852709/enterprise-patterns-with-functional-programming">or FP in general</a>, and StackOverflow provide some insights on the
+design of big architectures.
+</p>
+
+<p>
+I hope this is some good suggestions of content, and please,
+contribute back to this list.  You can also ask questions on the
+#haskell IRC channel, which have an <a href="https://gist.github.com/quchen/5280339">example</a> of a bunch of nice
+people sharing knowledge.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Using a stronger type system on your applications</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Typesafety is a feature that you grow into liking.  Having the
+compiler rejecting the program because you used the wrong function
+on a data structure makes me feel happier than having that error
+being catched after many rounds of tests, or in production.
+</p>
+
+<p>
+Bartosz Milewski has a post on <a href="http://bartoszmilewski.com/2014/11/24/types-and-functions/">Types and Functions</a> that could help
+you to start liking some stronger type system.
+</p>
+
+<p>
+Modeling your domain on that kind of type system can bring many
+benefits, from on encoding the rules and logic of your application
+on a executable format, to having a more readable restrictions
+represented on your data.  Scott Wlaschin have a talk demonstrating
+what you can do with <a href="http://vimeo.com/97507575">F# to domain your model under its type system</a>,
+and leverage the benefits of having those types in-place.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Transducers</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Transducers are concepts that could be as complicated as Monads to
+be explained.  The <a href="http://clojure.org/transducers">Clojure documentation</a> has some technical
+information on using and creating transducers.
+</p>
+
+<p>
+Rich Hickey gave an <a href="https://www.youtube.com/watch?v=6mTbuzafcII">introduction presentation</a> at StrangeLoop, with
+a follow-up talk explaining some of the <a href="https://www.youtube.com/watch?v=4KqUvG8HPYo">inside of the abstraction</a>
+on Clojure/conj.
+</p>
+
+<p>
+Transducers work on top of functions, and return functions. You can
+compose the resulting functions to create a processing pipeline,
+but if will look a bit backwards if you are used to compose
+functions.  Isac Cambron goes briefly <a href="http://isaaccambron.com/blog/2014/12/13/transducer-composition.html">explaining and demonstrating</a>
+why they compose backwardly.
+</p>
+
+<p>
+As I mentioned before, adding type annotation on a function could
+help you understand what is allowed to get in, and what is the
+output.  And annotating transducers sounds like a nice challenge.
+Peter Fraenkel has a blog post with <a href="http://blog.podsnap.com/ducers2.html">annotated transducers on
+Clojure. And Scala. And Haskell.</a> An the followup posts on the
+series are really good to read as well.
+</p>
+
+<hr  />
+
+<p>
+I hope you like the content of this link dump, with many functional links. 
+We now have the an <a href="http://linkdump.bltavares.com/atom.xml">Atom feed</a> if you would rather that delivery method.
+</p>
+
+<p>
+Keep producing new content and send me links.
+</p>
+
+<p>
+Cheers,
+</p>
+
+<p>
+Bruno Tavares
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2015-01-18 Sun 20:00</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
