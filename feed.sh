@@ -4,14 +4,10 @@ file=${1:-atom.xml}
 title="Link Dump"
 base_url="http://linkdump.bltavares.com/"
 
-date_rfc() {
-    date --rfc-3339=seconds -d "$1" | tr ' ' 'T'
-}
-
 entries() {
     for src in archive/*.org; do
         file="${src%.org}.html"
-        git_info="$(git log -n1 --format='%H|%an|%ai' -- "$file")"
+        git_info="$(git log -n1 --format='%H|%an|%aI' -- "$file")"
         IFS='|' read hash author date <<<"$git_info"
         content="$(git show $hash:$file | awk '/<body>/{ p=1; next } /<\/body>/{p=0} p')"
         title=$(grep 'h1' <<<"$content" | grep 'title' | cut -d'>' -f2 | cut -d'<' -f1)
@@ -22,7 +18,7 @@ entries() {
 		<link href="${base_url}${file}" />
 		<link rel="alternate" type="text/plain" href="${base_url}${src}"/>
 		<id>${base_url}${file}</id>
-		<updated>$(date_rfc "$date")</updated>
+		<updated>${date}</updated>
 		<author>
 			<name>${author}</name>
 		</author>
@@ -37,8 +33,7 @@ EOF
 }
 
 last_update() {
-    date=$(git log -n1 --format='%ai' -- archive)
-    date_rfc "$date"
+    git log -n1 --format='%aI' -- archive
 }
 
 cat > $file <<EOF
